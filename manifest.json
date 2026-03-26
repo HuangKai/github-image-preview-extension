@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Image Preview",
+  "version": "1.0.0",
+  "description": "Click to preview images in GitHub README and Wiki with overlay, zoom, and navigation.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*",
+        "https://*.github.com/*"
+      ],
+      "js": ["content/index.js"],
+      "css": ["styles/overlay.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [],
+  "icons": {}
+}
