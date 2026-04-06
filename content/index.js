@@ -95,7 +95,7 @@
   }
 
   function onOverlayClick(e) {
-    if (e.target === overlay) close();
+    if (e.target === overlay || e.target.classList.contains('gip-image-container')) close();
   }
 
   function onWheel(e) {
@@ -169,21 +169,21 @@
 
     const closeBtn = document.createElement('button');
     closeBtn.className = 'gip-close';
-    closeBtn.innerHTML = '&times;';
+    closeBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
     closeBtn.title = 'Close (Esc)';
     closeBtn.addEventListener('click', close);
     overlay.appendChild(closeBtn);
 
     prevBtn = document.createElement('button');
     prevBtn.className = 'gip-nav-btn gip-prev';
-    prevBtn.innerHTML = '&#8249;';
+    prevBtn.innerHTML = '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
     prevBtn.title = 'Previous';
     prevBtn.addEventListener('click', () => navigate(-1));
     overlay.appendChild(prevBtn);
 
     nextBtn = document.createElement('button');
     nextBtn.className = 'gip-nav-btn gip-next';
-    nextBtn.innerHTML = '&#8250;';
+    nextBtn.innerHTML = '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
     nextBtn.title = 'Next';
     nextBtn.addEventListener('click', () => navigate(1));
     overlay.appendChild(nextBtn);

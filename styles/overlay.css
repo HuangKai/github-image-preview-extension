@@ -44,95 +44,116 @@
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 52px;
+  height: 52px;
+  background: rgba(30, 30, 30, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
-  color: #fff;
-  font-size: 20px;
+  color: rgba(255, 255, 255, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 1;
-  opacity: 0.7;
-  transition: opacity 0.2s, background 0.2s;
-  line-height: 1;
+  opacity: 0.8;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
-.gip-nav-btn:hover {
+.gip-nav-btn:hover:not(:disabled) {
   opacity: 1;
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(50, 50, 50, 0.7);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
-.gip-nav-btn:active {
-  opacity: 1;
-  background: rgba(255, 255, 255, 0.3);
+.gip-nav-btn:active:not(:disabled) {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .gip-nav-btn:disabled {
-  opacity: 0.2;
-  cursor: default;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .gip-prev {
-  left: 16px;
+  left: 24px;
 }
 
 .gip-next {
-  right: 16px;
+  right: 24px;
 }
 
 .gip-close {
   position: fixed;
-  top: 16px;
-  right: 16px;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  top: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: rgba(30, 30, 30, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
-  color: #fff;
-  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 1;
-  opacity: 0.7;
-  transition: opacity 0.2s, background 0.2s;
-  line-height: 1;
+  opacity: 0.8;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .gip-close:hover {
   opacity: 1;
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(50, 50, 50, 0.7);
+  color: #fff;
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.gip-close:active {
+  transform: scale(0.95);
 }
 
 .gip-counter {
   position: fixed;
-  bottom: 16px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 14px;
+  font-weight: 500;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 4px 12px;
-  border-radius: 12px;
+  background: rgba(30, 30, 30, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 16px;
+  border-radius: 20px;
   pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .gip-zoom-info {
   position: fixed;
-  bottom: 16px;
-  right: 16px;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 13px;
+  bottom: 24px;
+  right: 24px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 500;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 4px 10px;
-  border-radius: 8px;
+  background: rgba(30, 30, 30, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 14px;
+  border-radius: 12px;
   pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
